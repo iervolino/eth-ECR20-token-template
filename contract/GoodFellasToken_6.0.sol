@@ -1,4 +1,4 @@
-pragma solidity 0.6.6;
+pragma solidity 0.8.11;
 
 // ----------------------------------------------------------------------------
 // 'GoodFellasToken' token contract
@@ -9,7 +9,7 @@ pragma solidity 0.6.6;
 // Total supply: 100000000
 // Decimals    : 18
 //
-// Enjoy.
+// SPDX-License-Identifier: UNLICENSED
 //
 // (c) by Francesco Iervolino.
 // ----------------------------------------------------------------------------
@@ -74,7 +74,7 @@ contract Owned {
 
     event OwnershipTransferred(address indexed _from, address indexed _to);
 
-    constructor() public {
+    constructor() {
         owner = msg.sender;
     }
 
@@ -112,7 +112,7 @@ contract GoodFellasToken is ERC20Interface, Owned, SafeMath {
     // ------------------------------------------------------------------------
     // Constructor
     // ------------------------------------------------------------------------
-    constructor() public {
+    constructor() {
         symbol = "GF";
         name = "GoodFellas";
         decimals = 0;
